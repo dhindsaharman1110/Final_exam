@@ -1,4 +1,4 @@
-/* body{
+body{
     max-width: 600px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -15,7 +15,7 @@ header{
 
 div img {
     /* display: inline-flex; */
-    /* width: 20%;
+    width: 20%;
     
 }
 
@@ -56,4 +56,4 @@ footer{
     }
     
 
-} */ 
+} 
