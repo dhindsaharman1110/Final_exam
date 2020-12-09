@@ -1,22 +1,17 @@
+// qyery selectors to select the elements
 label_item=document.querySelector("#label_01")
 input_item=document.querySelector("#effect")
 button_item=document.querySelector("#formButton")
 
 
-
-
-
-
+// THis portion makes the form elements hidden when the user open the browser
 label_item.style.visibility="hidden"
 input_item.style.visibility="hidden"
 button_item.style.visibility="hidden"
 
 
-
-
+// This fubction add the images in the <img> tag using for loop
 function add_images_in_HTML(){
-
-
     for (let i=1; i<=5; i++){
         let parent_item=document.querySelector("#thumb-bar")
         let new_img=document.createElement("img")
@@ -30,20 +25,23 @@ function add_images_in_HTML(){
         new_img.setAttributeNode(atr)
         new_img.setAttributeNode(source)
         parent_item.appendChild(new_img)
-
     }
 }
 
 add_images_in_HTML()
 
+
+// this event listener is doing the main stuff and hovering over the 
+// thumblains and add up the image element in the html code
 let thumblain_area=document.querySelector("#thumblain_area")
 thumblain_area.addEventListener("mouseover",show_image);
 
 function show_image(event){
+    // this portion makes the form elemnts visible
     label_item.style.visibility="visible"
     input_item.style.visibility="visible"
     button_item.style.visibility="visible"
-
+    // this portion is creating the new attribute called src and id and setting it to its ekements
     let img_element=document.querySelector(".displayed-img")
     let add_img=document.createAttribute("src")
     let img_id=document.createAttribute("id")
@@ -72,6 +70,7 @@ function show_image(event){
 }
 
 
+// this portion works for the submit button
 button_item.addEventListener("click", add_image)
 
 function add_image(){
